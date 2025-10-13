@@ -1,6 +1,6 @@
 #include <cstdio>
 #include <print>
-#include <PicoSHA2/picosha2.h>
+#include <picosha2.h>
 #include <sqlite3.h>
 
 template <typename T>
@@ -69,7 +69,7 @@ Vec<byte> load_file(String filename) {
         std::println("Failed to load the file!");
         return Vec<byte>(0);
     }
-    return std::move(buff);
+    return buff;
 };
 
 int main () {
